@@ -45,8 +45,8 @@ function htmlToJavascript(element, variableNamesFromId, keepScripts, keepInlineE
                 let isEvent = child[eventName] && Object.getPrototypeOf(child[eventName])==nativeProto;
                 let isStyle = (attribute.name=="style") && (Object.getPrototypeOf(child.style) == CSSStyleDeclaration.prototype);
                 let finalName = attribute.name;
-                if (finalName=="class") finalName="className"; // OH JAVASCRIPT
-                if (finalName=="for") finalName="htmlFor"; // OH JAVASCRIPT
+                if (finalName=="class") finalName="className";
+                if (finalName=="for") finalName="htmlFor";
 
                 if (!isEvent && !isStyle && finalName.match(idRegex))
                 {
